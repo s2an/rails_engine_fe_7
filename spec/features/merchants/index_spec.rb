@@ -7,6 +7,7 @@ RSpec.describe "Challenge #3" do
     # I should be on page '/merchants/:id'
     # And I should see a list of items that merchant sells.
     it "lists all the items a merchant sells" do
+
       visit merchants_path
 
       expect(current_path).to eq(merchants_path)
