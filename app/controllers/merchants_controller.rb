@@ -12,6 +12,6 @@ class MerchantsController < ApplicationController
   
     items_response = Faraday.get("http://localhost:3000/api/v1/merchants/#{merchant_id}/items")
     @items = JSON.parse(items_response.body, symbolize_names: true)
-  end
+  end                         
   
 end

@@ -1,3 +1,5 @@
+require "rails_helper"
+
 RSpec.describe "Challenge #3" do
   describe "User Story - Items" do
   # User Story - Items
