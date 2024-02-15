@@ -3,13 +3,6 @@ namespace :test do
     require 'json'
     require 'fileutils'
 
-    begin
-      require 'faraday'
-    rescue LoadError
-      puts "❗Failure: Please install the Faraday gem"
-      exit 1
-    end
-
     if args[:base_url].nil? || args[:endpoint].nil?
       puts "❗Failure: Both base_url and endpoint must be provided."
       exit 1
