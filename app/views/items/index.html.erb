@@ -1,0 +1,5 @@
+<h1>Item Index</h1>
+
+<% @items[:data].each do |item| %>
+  <li><%= link_to item[:attributes][:name], item_path(item[:id]) %></li>
+<% end %>
