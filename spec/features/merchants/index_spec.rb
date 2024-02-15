@@ -7,8 +7,8 @@ RSpec.describe "Challenge #3" do
     # I should be on page '/merchants/:id'
     # And I should see a list of items that merchant sells.
     it "lists all the items a merchant sells" do
-      visit merchants_path
-pry
+      visit api_v1_merchants_path
+
       expect(current_path).to eq(merchants_path)
       expect(page).to contain(merchant.name)
       expect(page).to have_link(merchant.name)
