@@ -1,5 +1,5 @@
 <h1>Merchant Index</h1>
 
 <% @merchants[:data].each do |merchant| %>
-  <li><%= merchant[:attributes][:name] %></li>
+  <li><%= link_to merchant[:attributes][:name], merchant_path(merchant[:id]) %></li>
 <% end %>
