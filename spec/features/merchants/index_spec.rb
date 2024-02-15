@@ -11,13 +11,14 @@ RSpec.describe "Challenge #3" do
 
     it "lists all the items a merchant sells" do
       json_response = File.read("spec/fixtures/api_v1_merchants.json")
-       stub_request(:get, "http://localhost:3000/api/v1/merchants.json")
+       stub_request(:get, "http://localhost:3000/api/v1/merchants")
         .to_return(status: 200, body: json_response)
 # require "pry"; binding.pry
-      visit "/merchants"
-
+      visit merchants_path
+# save_and_open_page
+# need to declare different, but cant see page
       expect(current_path).to eq(merchants_path)
-      expect(page).to contain(merchant.name)
+      expect(page).to contain(merchant[:name])
       expect(page).to have_link(merchant.name)
       
       click_link(merchant.name)
